@@ -24,7 +24,10 @@ install:
 script:
   # Basic role syntax check
   - echo "starting test"
+  - cd roles/world-domination/
+  # doing a simple syntax check of the role
   - ansible-playbook tests/test.yml -i tests/inventory --syntax-check
+  # Now, we try to execute the role under test conditions
   - ansible-playbook tests/test.yml -i tests/inventory 
 
 notifications:
