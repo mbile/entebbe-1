@@ -26,9 +26,9 @@ script:
   - echo "starting test"
 #  - cd roles/world-domination/
   # doing a simple syntax check of the role
-  - ansible-playbook roles/world-domination/tests/test.yml -i tests/inventory --syntax-check
+  - ansible-playbook roles/world-domination/tests/test.yml -i roles/world-domination/tests/inventory --syntax-check
   # Now, we try to execute the role under test conditions
-  - ansible-playbook roles/world-domination/tests/test.yml -i tests/inventory 
+  - ansible-playbook roles/world-domination/tests/test.yml -i roles/world-domination/tests/inventory 
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
